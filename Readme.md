@@ -1,4 +1,4 @@
-## MULTITOUCH FOR PUREDATA
+# MULTITOUCH FOR PUREDATA
  Enabling pseudo-multi-touch mode with pd-native guis, inside any patch.
  This is higly experimental, and not guaranteed to work on any other touchscreen setup than mine.
 
@@ -6,7 +6,7 @@ To achieve this, we use 2 components :
 * a custom executable, TouchscreenSend, derivated from evtest, that catches screentouch events and sends them by osc to the port 7000 on local host.
 * a set of pd-abstactions receiving those osc data and converting them into simulated mouse events sent to the gui-patch.
 
-# FIRST INSTALL GUIDELINES
+## FIRST INSTALL GUIDELINES
 
 - Required configuration : linux pc with multitouch screen.
 - Multitouch gestures (scrolling, zooming, pinch, etc...) shoud be desactivated on the O.S.
@@ -30,7 +30,7 @@ To achieve this, we use 2 components :
 7) You should now use the native pd-gui objects in pseudo-multitouch mode. Test with multitouch.enable-help.pd
 
 8) To add the multitouch features to your pd-project, you'll have to add the path to the multitouch abstractions
-# BUGS
+## BUGS
 
 -Allways close the patch before leaving puredata. If no, the process TouchscreenSend launched by ggee/shell will freeze pd.
 -Don't edit multitouch.enable, because it does dynamic patching on loadbang and won't work properly if modified.
