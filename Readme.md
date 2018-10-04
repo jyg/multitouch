@@ -1,10 +1,5 @@
 # MULTITOUCH FOR PUREDATA
 
-<iframe src="https://player.vimeo.com/video/292789121" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/292789121">Pure Data Multitouch (pd &gt;= 0.48), linux + laptop with touchscreen</a> from <a href="https://vimeo.com/user5743674">jyg</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
- <a href="https://github.com/pierreguillot/Camomile/wiki">
-    <img src="https://user-images.githubusercontent.com/1409918/37906678-2b998b0a-3103-11e8-946a-10df0f3d2eca.png" alt="Logo" width=72 height=72>
-  </a>
  Enabling pseudo-multi-touch mode with pd-native guis, inside any patch.
  This is higly experimental, and not guaranteed to work on any other touchscreen setup than mine.
 
