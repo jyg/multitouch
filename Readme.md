@@ -4,7 +4,7 @@
  This is higly experimental, and not guaranteed to work on any other touchscreen setup than mine.
  Demo here : https://vimeo.com/292789121
 
-To achieve this, we use 2 components :
+To achieve this, I use 2 components :
 * a custom executable, TouchscreenSend, derivated from evtest, that catches screentouch events and sends them by osc to the port 7000 on local host.
 * a set of pd-abstactions receiving those osc data and converting them into simulated mouse events sent to the gui-patch.
 
