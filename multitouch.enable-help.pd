@@ -1,0 +1,50 @@
+#N canvas 947 332 925 529 16;
+#X text 28 43 Enables pseudo-multi-touch mode inside a patch;
+#X obj 53 291 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 17400 0;
+#X obj 222 288 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 16000 0;
+#X obj 403 291 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 19900 0;
+#X obj 572 288 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 19900 0;
+#N canvas 0 50 862 379 first-configuration 0;
+#X obj 545 158 multitouch.settings;
+#X text 35 25 1) install / launch evtest program in a console \; 2)
+in the displayed list \, find the address of your touchscreen input
+device on your system (example : "/dev/input/event17" ) \;;
+#X text 35 141 3) open \, edit and save this patch with the configuration
+of your system \;, f 43;
+#X text 34 213 4) save and close this patch. 5) you should now use
+the native pd-gui objects in pseudo-multitouch mode. test with multitouch.enable-help.pd
+;
+#X text 496 157 -->;
+#X restore 296 146 pd first-configuration;
+#X text 28 122 When using for the first time \, click here and follow
+the instructions ->, f 49;
+#X text 128 8 [multitouch.enable];
+#X text 28 73 Just put an instance of [multitouch.enable] in any patch
+you want to use with multitouch (like this patch), f 55;
+#X text 28 182 To use multitouch in a patch \, you have first to calibrate
+by simply touching a blank area into this pd-patch window.;
+#X obj 609 13 cnv 15 220 120 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X msg 627 26 1;
+#X msg 628 59 0;
+#X obj 626 95 multitouch.enable;
+#X text 670 23 enable (default);
+#X text 669 57 disable;
+#N canvas 101 267 889 470 technical_explanations 0;
+#X text 38 166 each fingertouch is tracked by a slot (0-9);
+#X text 37 256 This way \, multitouch events are demultiplexed into
+sequences of very short [mouse + mouseup] events;
+#X text 37 31 multitouch.enable creates \, if needed \, one unique
+instance of multitouch.daemon.;
+#X text 37 85 multitouch.daemon launches a program (TouchscreenSend)
+that catches touchscreen events and sends them with OSC protocol on
+UDP port 7000, f 52;
+#X text 42 196 every slot sends mouse + move / mouseup events to the
+pd-patch;
+#X restore 665 194 pd technical_explanations;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
