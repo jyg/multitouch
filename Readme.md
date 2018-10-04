@@ -2,6 +2,7 @@
 
  Enabling pseudo-multi-touch mode with pd-native guis, inside any patch.
  This is higly experimental, and not guaranteed to work on any other touchscreen setup than mine.
+ Demo here : https://vimeo.com/292789121
 
 To achieve this, we use 2 components :
 * a custom executable, TouchscreenSend, derivated from evtest, that catches screentouch events and sends them by osc to the port 7000 on local host.
