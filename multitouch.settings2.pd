@@ -15,7 +15,7 @@
 #X obj 540 252 /;
 #X obj 690 252 /;
 #X obj 690 142 t f b;
-#X floatatom 242 273 5 0 0 0 - - #0-set-device-number;
+#X floatatom 242 273 5 0 0 0 - - #0-set-device-number, f 5;
 #X text 55 198 2) in the pd console \, look for your touchscreen device
 number \, and report it here ->, f 20;
 #X obj 595 174 r \$0-xrange;
@@ -76,8 +76,8 @@ device here --->, f 27;
 #X obj 666 427 t b;
 #X obj 666 460 delay 200;
 #X obj 135 47 t b b;
-#X msg 134 89 open 17 \, 1, f 12;
-#X msg 666 369 ELAN Touchscreen;
+#X msg 134 89, f 12;
+#X msg 666 369 blank;
 #X msg 46 386 reset;
 #X msg 46 444 set;
 #X msg 100 452 set blank;
@@ -144,7 +144,7 @@ have first to adjust this patch according to your configuration, f
 #X text 40 533 WARNING : befor closing this patch \, please check that
 the device and screen resolutions are correct (yellow and orange rectangles)
 , f 47;
-#X msg 107 412 ELAN Touchscreen;
+#X msg 107 412;
 #X msg 585 213 3968;
 #X msg 735 210 2240;
 #X msg 583 418 1920;
