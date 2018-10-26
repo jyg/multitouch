@@ -3,7 +3,7 @@ This is a modified version of hidio external, as the current vesrion (found here
 In hidio.c, on line 526 some events are filtered (when they appear several times) and not sent to Pd. Furthermore, some events
 are duplicated as there is an instruction hidio_output_event(x, output_element) both in the parent function (hidio.c, line 528) and in the called function (hidio_linux.c, line 361). 
 
-For a correct use of the MT Protocol, all events have to be transmitted in order of arrival. 
+For a correct use of the MT Protocol, **all events have to be transmitted only one time, in order of arrival**. 
 
 (for an explanation of the protocol, see https://www.kernel.org/doc/Documentation/input/multi-touch-protocol.txt)
 
