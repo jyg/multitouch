@@ -1,0 +1,23 @@
+#N canvas 403 178 911 459 16;
+#X obj 686 60 multitouch.enable;
+#X text 413 239 TODO : Autres arguments (size....);
+#X obj 64 125 xytouchpad;
+#X msg 67 40 set 0.4;
+#X floatatom 64 330 5 0 0 0 - - -;
+#X floatatom 153 344 5 0 0 0 - - -;
+#X obj 256 342 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 92 85 0.7;
+#X msg 178 41 set 0.2;
+#X msg 203 86 0.5;
+#X text 414 175 arg1 \, arg2 : default x \, y value;
+#X text 413 126 output value between 0 ... 1;
+#X text 346 311 to be used with mouse \, needs cyclone/mousestate;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 2 2 6 0;
+#X connect 3 0 2 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 1;
+#X connect 9 0 2 1;
+#X coords 0 459 1 458 120 254 0;

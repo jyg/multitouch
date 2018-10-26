@@ -1,0 +1,33 @@
+#N canvas 372 591 1920 1023 16;
+#X obj 813 246 - 127;
+#X obj 813 275 * -2;
+#X obj 100 102 vsl 120 249 0 127 0 0 empty empty empty 0 -9 0 10 -258113
+-258113 -1 17700 1;
+#X obj 810 355 s \$0-cnv;
+#X obj 100 100 cnv 1 120 72 empty \$0-cnv empty 20 12 0 14 -228856
+-66577 0;
+#X obj 574 50 inlet;
+#X obj 574 79 route float set;
+#X obj 575 206 t f f;
+#X obj 593 341 outlet;
+#X obj 826 43 loadbang;
+#X obj 823 80 f \$1;
+#X obj 660 134 t f f;
+#X msg 810 326 vis_size 120 \$1;
+#X obj 194 63 multitouch.listener y 0.5 1;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 13 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 1 11 0;
+#X connect 7 0 8 0;
+#X connect 7 1 0 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 11 1 13 1;
+#X connect 12 0 3 0;
+#X connect 13 0 2 0;
+#X connect 13 1 7 0;
+#X coords 0 -1 1 1 120 254 2 100 100;

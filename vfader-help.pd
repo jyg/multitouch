@@ -1,0 +1,15 @@
+#N canvas 403 178 911 459 16;
+#X msg 246 86 set 8;
+#X msg 249 118 60;
+#X floatatom 140 411 5 0 0 0 - - -;
+#X obj 686 60 multitouch.enable;
+#X text 414 175 arg1 : default value;
+#X text 413 126 output value between 0 & 127;
+#X text 413 239 TODO : Autres arguments (size....);
+#X obj 130 148 vfader;
+#X text 94 107 vfader;
+#X text 44 27 vertical fader \, touch-compatible;
+#X connect 0 0 7 0;
+#X connect 1 0 7 0;
+#X connect 7 0 2 0;
+#X coords 0 459 1 458 120 254 0;

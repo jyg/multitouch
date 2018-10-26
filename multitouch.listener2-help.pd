@@ -1,0 +1,30 @@
+#N canvas 441 132 1111 654 16;
+#X text -60 -45 https://www.automatonism.com/;
+#X obj 475 87 multitouch.enable;
+#X obj 79 265 vsl 70 150 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7000 0;
+#X obj 172 264 vsl 70 150 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4200 1;
+#X obj 262 264 vsl 70 150 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 300 1;
+#X obj 352 264 vsl 70 150 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6100 1;
+#X obj 442 264 vsl 70 150 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 100 1;
+#X obj 442 205 multitouch.listener2 y 0.4;
+#X obj 352 175 multitouch.listener2 y 0.4;
+#X obj 262 135 multitouch.listener2 y 0.4;
+#X obj 172 105 multitouch.listener2 y 0.4;
+#X obj 79 63 multitouch.listener2 y 0.4;
+#X text 299 497 en cours. pour crer des objets gui dédiés ne réagissant
+pas à la souris;
+#X connect 2 0 11 0;
+#X connect 3 0 10 0;
+#X connect 4 0 9 0;
+#X connect 5 0 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 6 0;
+#X connect 8 0 5 0;
+#X connect 9 0 4 0;
+#X connect 10 0 3 0;
+#X connect 11 0 2 0;

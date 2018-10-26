@@ -1,0 +1,31 @@
+#N canvas 0 57 1920 1023 16;
+#X text -60 -45 https://www.automatonism.com/;
+#X obj 684 350 multitouch.enable;
+#X text 628 69 arg1 : axe (x / y);
+#X text 632 237 TODO arg4 = minvalue \, arg5 = maxvalue ?;
+#X obj 64 138 vsl 138 350 0 127 0 0 empty \$0-rcv vol 0 20 0 10 -166441
+-1 -1 0 1;
+#X floatatom 315 133 5 0 0 0 - - -;
+#X text 628 109 arg2 : demultiplication mouvement (multitouch mode)
+;
+#X obj 274 268 vsl 138 175 0 127 0 0 empty \$0-rcv vol 0 20 0 10 -166441
+-1 -1 0 1;
+#X floatatom 525 263 5 0 0 0 - - -;
+#X text 923 526 arg1 * 127;
+#X text 817 534 arg2 = _________________;
+#X obj 65 90 multitouch.listener y 0.181 0.5;
+#X text 898 554 <gui size (px)>;
+#X text 109 554 arg2 doit tenir compte de la taille du gui (doit être
+inversement proportionnel à la dimension du gui) pour que la démultiplication
+soit équivqlente à celle en mode souris.;
+#X obj 275 220 multitouch.listener y 0.362 0.5;
+#X text 627 143 arg3 : demultiplication mouvement (mouse / monotouch
+mode) 1=>unité \; 0.5 => 2 fois plus lent \; @ => 2 fois plus vite
+;
+#X text 87 23 helper for building custom multitouch guis;
+#X connect 4 0 11 0;
+#X connect 7 0 14 0;
+#X connect 11 0 4 0;
+#X connect 11 1 5 0;
+#X connect 14 0 7 0;
+#X connect 14 1 8 0;

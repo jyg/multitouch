@@ -17,19 +17,24 @@ configuration;
 0;
 #X obj 325 220 cnv 15 20 20 empty empty empty 20 12 0 14 -257985 -66577
 0;
-#X obj 655 290 cnv 15 20 20 empty empty empty 20 12 0 14 -257985 -66577
+#X obj 655 300 cnv 15 20 20 empty empty empty 20 12 0 14 -257985 -66577
 0;
 #X text 321 213 <- fullscreen size;
 #X text 323 172 <- touchscreen device resolution;
-#X text 655 290 <- path to the TouchscreenSend program and address
+#X text 655 300 <- path to the TouchscreenSend program and address
 of the touchscreen device on your system, f 39;
-#X msg 277 287 /home/jyg/multitouch/TouchscreenSend /dev/input/event17
-, f 37;
+#X obj 427 104 hcs/screensize;
+#X obj 427 74 loadbang;
+#X msg 277 287 /home/jyg/Desktop/Projets/developpement/evtest/oscpack_1_1_0/bin/TouchscreenSend
+/dev/input/event17, f 33;
 #X connect 0 0 4 0;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
 #X connect 5 0 7 0;
 #X connect 6 0 1 0;
 #X connect 7 0 3 0;
-#X connect 12 0 19 0;
-#X connect 19 0 11 0;
+#X connect 12 0 21 0;
+#X connect 19 0 6 1;
+#X connect 19 1 7 1;
+#X connect 20 0 19 0;
+#X connect 21 0 11 0;

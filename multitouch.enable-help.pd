@@ -1,50 +1,66 @@
-#N canvas 947 332 925 529 16;
+#N canvas 712 400 986 536 16;
 #X text 28 43 Enables pseudo-multi-touch mode inside a patch;
 #X obj 53 291 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 17400 0;
+-1 -1 3800 0;
 #X obj 222 288 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 16000 0;
+-1 -1 5300 0;
 #X obj 403 291 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 19900 0;
-#X obj 572 288 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 19900 0;
-#N canvas 0 50 862 379 first-configuration 0;
-#X obj 545 158 multitouch.settings;
-#X text 35 25 1) install / launch evtest program in a console \; 2)
-in the displayed list \, find the address of your touchscreen input
-device on your system (example : "/dev/input/event17" ) \;;
-#X text 35 141 3) open \, edit and save this patch with the configuration
-of your system \;, f 43;
-#X text 34 213 4) save and close this patch. 5) you should now use
-the native pd-gui objects in pseudo-multitouch mode. test with multitouch.enable-help.pd
-;
-#X text 496 157 -->;
-#X restore 296 146 pd first-configuration;
-#X text 28 122 When using for the first time \, click here and follow
-the instructions ->, f 49;
+-1 -1 6100 0;
+#X obj 572 284 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8500 0;
 #X text 128 8 [multitouch.enable];
 #X text 28 73 Just put an instance of [multitouch.enable] in any patch
 you want to use with multitouch (like this patch), f 55;
-#X text 28 182 To use multitouch in a patch \, you have first to calibrate
-by simply touching a blank area into this pd-patch window.;
 #X obj 609 13 cnv 15 220 120 empty empty empty 20 12 0 14 -262130 -66577
 0;
 #X msg 627 26 1;
 #X msg 628 59 0;
 #X obj 626 95 multitouch.enable;
 #X text 670 23 enable (default);
-#X text 669 57 disable;
-#N canvas 101 267 889 470 technical_explanations 0;
-#X text 38 166 each fingertouch is tracked by a slot (0-9);
-#X text 37 256 This way \, multitouch events are demultiplexed into
-sequences of very short [mouse + mouseup] events;
-#X text 37 31 multitouch.enable creates \, if needed \, one unique
-instance of multitouch.daemon.;
-#X text 37 85 multitouch.daemon launches a program (TouchscreenSend)
-that catches touchscreen events and sends them with OSC protocol on
-UDP port 7000, f 52;
-#X text 42 196 every slot sends mouse + move / mouseup events to the
-pd-patch;
-#X restore 665 194 pd technical_explanations;
-#X connect 11 0 13 0;
-#X connect 12 0 13 0;
+#X text 726 69 disable;
+#N canvas 505 98 1163 714 other_guis 0;
+#X obj 101 100 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 15000 0;
+#X obj 382 99 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 7900 1;
+#X obj 897 35 multitouch.enable;
+#X obj 212 100 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 14500 0;
+#X text 42 40 * native GUIs;
+#X text 42 361 * custom GUIs;
+#X text 94 401 vfader;
+#X obj 101 437 vfader;
+#X obj 492 99 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8200 1;
+#X obj 660 100 hradio 60 1 0 5 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X floatatom 667 232 5 0 0 0 - - -;
+#X obj 664 320 tgl 100 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 663 180 number boxes don't work properly in multitouch mode
+, f 32;
+#X text 91 68 vsl/hsl (jump on click);
+#X text 391 68 vsl/hsl (sliding);
+#X text 665 65 h/v radios;
+#X obj 891 319 bng 100 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 344 382 xytouchpad;
+#X text 663 269 toogles and bangs work if you tap with the finger without
+dragging, f 38;
+#X obj 314 422 xytouchpad;
+#X floatatom 299 669 5 0 0 0 - - -;
+#X floatatom 414 674 5 0 0 0 - - -;
+#X obj 514 669 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 19 0 20 0;
+#X connect 19 1 21 0;
+#X connect 19 2 22 0;
+#X restore 698 154 pd other_guis;
+#X text 28 137 To use multitouch in a patch \, you have first to touch
+inside this path with the finger (not with the mouse);
+#X obj 666 218 bng 30 250 50 0 MULTITOUCH.SETTINGS.OPEN empty empty
+17 7 0 10 -262144 -1 -1;
+#X text 28 220 To open the multitouch configuration settings \, click
+here ->, f 63;
+#X connect 8 0 10 0;
+#X connect 9 0 10 0;
