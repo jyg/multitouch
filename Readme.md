@@ -7,7 +7,7 @@ Any feedback wellcome jyg@gumo.fr
 
  Demo here : https://vimeo.com/292789121
 
-## FIRST INSTALL GUIDELINES
+## Configuration
 
 - Required configuration : linux pc with multitouch screen.
 - Multitouch gestures (scrolling, zooming, pinch, etc...) shoud be desactivated on the O.S.. Only monotouch events have to be forwarded as mouse events by the O.S..
@@ -16,6 +16,7 @@ Any feedback wellcome jyg@gumo.fr
 - iemguts lib externals
 - and a special version of hidio (included). see here https://github.com/jyg/PdMultitouch/blob/master/hidio/Readme.md
 
+## Installation
 1) check you have installed iemguts externals library.
 
 2) put the *hidio.pd_linux* file (from hidio folder) into your externals folder. Check if it works by opening hidio-help.pd. (If not, you may have to recompile it. In a terminal inside hidio folder, type  **./configure** then **make**).
