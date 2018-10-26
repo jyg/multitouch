@@ -10,7 +10,7 @@ Any feedback wellcome jyg@gumo.fr
 ## FIRST INSTALL GUIDELINES
 
 - Required configuration : linux pc with multitouch screen.
-- Multitouch gestures (scrolling, zooming, pinch, etc...) shoud be desactivated on the O.S.
+- Multitouch gestures (scrolling, zooming, pinch, etc...) shoud be desactivated on the O.S.. Only monotouch events have to be forwarded as mouse events by the O.S..
 - Puredata 0.49, with hcs/screensize (optional), iemguts lib externals, and a special version of hidio (included)
 
 1) check you have installed iemguts externals library.
