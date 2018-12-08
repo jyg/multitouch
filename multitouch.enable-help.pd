@@ -1,13 +1,13 @@
-#N canvas 712 400 986 536 16;
+#N canvas 182 295 986 536 16;
 #X text 28 43 Enables pseudo-multi-touch mode inside a patch;
 #X obj 53 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 0;
 #X obj 222 218 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 0;
+-1 -1 0 0;
 #X obj 403 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 13800 0;
+-1 -1 0 0;
 #X obj 572 214 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10800 0;
+-1 -1 0 0;
 #X text 128 8 [multitouch.enable];
 #X text 28 73 Just put an instance of [multitouch.enable] in any patch
 you want to use with multitouch (like this patch), f 55;
@@ -17,26 +17,24 @@ you want to use with multitouch (like this patch), f 55;
 #X msg 628 59 0;
 #X obj 626 95 multitouch.enable;
 #X text 670 23 enable (default);
-#X text 726 69 disable;
-#N canvas 568 115 1163 714 other_guis 0;
+#X text 686 57 disable;
+#N canvas 361 117 1494 852 other_guis 0;
 #X obj 101 100 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9200 0;
+-1 -1 0 0;
 #X obj 382 99 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11300 1;
-#X obj 897 35 multitouch.enable;
+-1 -1 0 1;
 #X obj 212 100 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 14400 0;
+-1 -1 0 0;
 #X text 42 40 * native GUIs;
 #X text 42 361 * custom GUIs;
 #X text 94 401 vfader;
-#X obj 101 437 vfader;
 #X obj 492 99 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7300 1;
+-1 -1 0 1;
 #X obj 660 100 hradio 60 1 0 5 empty empty empty 0 -8 0 10 -262144
 -1 -1 2;
 #X floatatom 667 232 5 0 0 0 - - -;
 #X obj 664 320 tgl 100 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X text 663 180 number boxes don't work properly in multitouch mode
 , f 32;
 #X text 91 68 vsl/hsl (jump on click);
@@ -47,20 +45,33 @@ you want to use with multitouch (like this patch), f 55;
 #X text 344 382 xytouchpad;
 #X text 663 269 toogles and bangs work if you tap with the finger without
 dragging, f 38;
-#X obj 314 422 xytouchpad;
+#X obj 286 447 xytouchpad;
 #X floatatom 299 669 5 0 0 0 - - -;
 #X floatatom 414 674 5 0 0 0 - - -;
 #X obj 514 669 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X connect 19 0 20 0;
-#X connect 19 1 21 0;
-#X connect 19 2 22 0;
-#X restore 698 154 pd other_guis;
+#X obj 554 468 touchpad;
+#X obj 561 675 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 561 440 touchpad;
+#X obj 791 27 multitouch.enable;
+#X obj 63 448 vfader;
+#A saved -size 121 194;
+#X obj 822 451 scratchingpad;
+#X connect 17 0 18 0;
+#X connect 17 1 19 0;
+#X connect 17 2 20 0;
+#X connect 21 0 22 0;
+#X restore 645 154 pd other_guis;
 #X text 28 137 To use multitouch in a patch \, you have first to touch
 inside this path with the finger (not with the mouse);
 #X obj 839 480 bng 30 250 50 0 MULTITOUCH.SETTINGS.OPEN empty empty
 17 7 0 10 -262144 -1 -1;
 #X text 228 480 To open the multitouch configuration settings \, click
 here ->, f 63;
+#X text 811 94 <- to configure \, right-click + "properties", f 16
+;
+#X text 255 505 or right-click + "properties" on [multitouch.enable]
+;
 #X connect 8 0 10 0;
 #X connect 9 0 10 0;
