@@ -1,4 +1,4 @@
-#N canvas 504 119 1079 606 16;
+#N canvas 676 152 1079 709 16;
 #X obj 540 111 inlet;
 #X obj 540 504 outlet;
 #X obj 690 111 inlet;
@@ -9,13 +9,12 @@
 #X obj 840 111 inlet;
 #X obj 563 204 cnv 15 250 40 empty empty empty 20 12 0 14 -257985 -66577
 0;
-#X obj 617 315 hcs/screensize;
-#X obj 618 280 loadbang;
+#X obj 603 317 hcs/screensize;
 #X obj 540 141 t f b;
 #X obj 540 252 /;
 #X obj 690 252 /;
 #X obj 690 142 t f b;
-#X floatatom 242 273 5 0 0 0 - - #0-set-device-number;
+#X floatatom 242 273 5 0 0 0 - - #0-set-device-number, f 5;
 #X text 55 198 2) in the pd console \, look for your touchscreen device
 number \, and report it here ->, f 20;
 #X obj 595 174 r \$0-xrange;
@@ -28,16 +27,13 @@ number \, and report it here ->, f 20;
 #X obj 540 468 *;
 #X obj 689 380 t f b;
 #X obj 689 468 *;
-#X msg 617 347 set \$1;
-#X msg 747 348 set \$1;
+#X msg 603 349 set \$1;
+#X msg 748 350 set \$1;
 #X obj 562 409 cnv 15 250 40 empty empty empty 20 12 0 14 -260097 -66577
 0;
 #X text 829 208 <- touch input device resolution, f 19;
-#X text 850 413 <- fullscreen resolution, f 16;
 #X text 54 155 1) click here ->;
 #X text 57 314 3) click OK ->;
-#X text 53 451 ... and the touchscreen input device resolution may
-have changed., f 31;
 #X obj 358 390 r \$0-success;
 #X text 56 349 If success \, you should get the name of your touchscreen
 device here --->, f 27;
@@ -94,7 +90,7 @@ device here --->, f 27;
 #X obj 689 319 symbol;
 #X obj 776 319 symbol;
 #X obj 695 373 pack s s;
-#X msg 697 411 set open \$2 \$1 \, addcomma \, add2 1;
+#X msg 697 411 set open \$2 \$1 \, addcomma \, add2 1, f 12;
 #X connect 0 0 16 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
@@ -153,14 +149,10 @@ device here --->, f 27;
 #X connect 50 0 51 0;
 #X connect 51 0 29 0;
 #X restore 840 301 pd stuff;
-#X f 12;
 #X text 82 11 !!! WELCOME IN PD-MULTITOUCH !!!;
 #X text 61 48 Before you can use multitouch mode in puredata \, you
 have first to adjust this patch according to your configuration, f
 38;
-#X text 40 533 WARNING : befor closing this patch \, please check that
-the device and screen resolutions are correct (yellow and orange rectangles)
-, f 47;
 #X msg 107 412;
 #X msg 585 213 3968;
 #X msg 735 210 2240;
@@ -168,34 +160,49 @@ the device and screen resolutions are correct (yellow and orange rectangles)
 -1 -1;
 #X obj 898 111 inlet;
 #X msg 733 416 1080;
+#X obj 406 560 bng 40 250 50 0 empty empty empty 17 7 0 10 -4032 -1
+-1;
 #X msg 583 417 1920;
-#X connect 0 0 11 0;
-#X connect 2 0 14 0;
-#X connect 7 0 36 0;
-#X connect 9 0 25 0;
-#X connect 9 1 26 0;
-#X connect 10 0 9 0;
-#X connect 11 0 12 0;
-#X connect 11 1 41 0;
-#X connect 12 0 21 0;
-#X connect 13 0 23 0;
-#X connect 14 0 13 0;
-#X connect 14 1 42 0;
-#X connect 17 0 41 0;
-#X connect 18 0 42 0;
-#X connect 21 0 22 0;
-#X connect 21 1 46 0;
-#X connect 22 0 1 0;
-#X connect 23 0 24 0;
-#X connect 23 1 45 0;
-#X connect 24 0 3 0;
-#X connect 25 0 46 0;
-#X connect 26 0 45 0;
-#X connect 33 0 40 0;
-#X connect 36 0 6 0;
-#X connect 41 0 12 1;
-#X connect 42 0 13 1;
-#X connect 43 0 36 2;
-#X connect 44 0 36 1;
-#X connect 45 0 24 1;
-#X connect 46 0 22 1;
+#X obj 159 444 cnv 15 350 30 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X text 39 447 ... and the touchscreen input device resolution may
+have changed., f 47;
+#X obj 166 502 cnv 15 250 30 empty empty empty 20 12 0 14 -260097 -66577
+0;
+#X text 33 505 4) check your screen resolution :, f 47;
+#X text 85 611 If you have more screens (extended desktop) \, I think
+you have to edit the orange values manually;
+#X text 37 662 5) save and close this patch;
+#X text 850 413 <- touchscreen resolution, f 16;
+#X text 92 538 If you have only one screen \, you should click here
+to adjust the values automatically ----->, f 31;
+#X connect 0 0 10 0;
+#X connect 2 0 13 0;
+#X connect 7 0 33 0;
+#X connect 9 0 24 0;
+#X connect 9 1 25 0;
+#X connect 10 0 11 0;
+#X connect 10 1 37 0;
+#X connect 11 0 20 0;
+#X connect 12 0 22 0;
+#X connect 13 0 12 0;
+#X connect 13 1 38 0;
+#X connect 16 0 37 0;
+#X connect 17 0 38 0;
+#X connect 20 0 21 0;
+#X connect 20 1 43 0;
+#X connect 21 0 1 0;
+#X connect 22 0 23 0;
+#X connect 22 1 41 0;
+#X connect 23 0 3 0;
+#X connect 24 0 43 0;
+#X connect 25 0 41 0;
+#X connect 30 0 36 0;
+#X connect 33 0 6 0;
+#X connect 37 0 11 1;
+#X connect 38 0 12 1;
+#X connect 39 0 33 2;
+#X connect 40 0 33 1;
+#X connect 41 0 23 1;
+#X connect 42 0 9 0;
+#X connect 43 0 21 1;

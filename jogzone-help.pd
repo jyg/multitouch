@@ -1,0 +1,24 @@
+#N canvas 298 231 1040 845 16;
+#X text 338 11 pd 0.49;
+#X obj 518 139 multitouch.enable;
+#X text 69 10 jogzone;
+#X text 66 76 Fast and responsive pressure-sensitive jog zone;
+#X text 49 312 You can also right-click and choose "properties" to
+open properties dialog, f 47;
+#X obj 66 119 jogzone;
+#A saved -back_color 10;
+#A saved -front_color 1;
+#A saved -cursor_color -1;
+#A saved -jump_on_click 0;
+#A saved -size 112;
+#A saved -mode 0;
+#X obj 120 371 jogzone;
+#A saved -back_color 1;
+#A saved -front_color 1;
+#A saved -cursor_color 0;
+#A saved -jump_on_click 0;
+#A saved -size 198.5;
+#A saved -mode 1;
+#X text 335 29 dependancies : iemguts lib;
+#X text 48 250 To change size \, turn in edit mode (ctrl + e) then
+ctrl+drag on the jogzone, f 44;

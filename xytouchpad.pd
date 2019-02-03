@@ -1,7 +1,7 @@
 #N canvas -38 159 1022 772 16;
 #X obj 100 100 tgl 200 0 empty empty empty 17 7 0 10 -262144 -262144
--1 0 1;
-#N canvas 225 58 1920 1023 xylistener 1;
+-1 1 1;
+#N canvas 225 58 1920 1023 xylistener 0;
 #X obj 518 338 v MULTITOUCH.SLOT.ID;
 #X msg 594 478 symbol \$1-slot;
 #X obj 521 388 select 0;
@@ -150,10 +150,9 @@
 #X connect 59 0 45 0;
 #X connect 60 0 59 1;
 #X restore 285 429 pd xylistener;
-#X obj 686 60 multitouch.enable;
-#X obj 100 196 cnv 2 200 2 empty \$0-vcursor empty 20 12 0 14 -159808
+#X obj 100 106 cnv 2 200 2 empty \$0-vcursor empty 20 12 0 14 -159808
 -66577 0;
-#X obj 210 100 cnv 2 2 200 empty \$0-hcursor empty 20 12 0 14 -159808
+#X obj 100 100 cnv 2 2 200 empty \$0-hcursor empty 20 12 0 14 -159808
 -66577 0;
 #X obj 172 612 s \$0-hcursor;
 #X obj 569 601 s \$0-vcursor;
@@ -178,31 +177,31 @@
 #X obj 353 469 t f f;
 #X obj 672 249 route set;
 #X connect 0 0 1 0;
-#X connect 1 0 22 0;
-#X connect 1 1 25 0;
-#X connect 1 2 15 0;
-#X connect 7 0 9 0;
-#X connect 8 0 7 0;
+#X connect 1 0 21 0;
+#X connect 1 1 24 0;
+#X connect 1 2 14 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
 #X connect 9 0 5 0;
-#X connect 10 0 6 0;
-#X connect 11 0 10 0;
-#X connect 12 0 18 0;
-#X connect 16 0 1 1;
-#X connect 16 0 24 0;
-#X connect 17 0 1 2;
-#X connect 17 0 26 0;
+#X connect 10 0 9 0;
+#X connect 11 0 17 0;
+#X connect 15 0 1 1;
+#X connect 15 0 23 0;
+#X connect 16 0 1 2;
+#X connect 16 0 25 0;
+#X connect 17 0 18 0;
 #X connect 18 0 19 0;
-#X connect 19 0 20 0;
-#X connect 19 0 8 0;
-#X connect 19 1 21 0;
-#X connect 19 1 23 0;
-#X connect 20 0 1 1;
-#X connect 21 0 1 2;
-#X connect 22 0 13 0;
-#X connect 22 1 8 0;
-#X connect 23 0 11 0;
-#X connect 24 0 8 0;
-#X connect 25 0 14 0;
-#X connect 25 1 23 0;
-#X connect 26 0 23 0;
+#X connect 18 0 7 0;
+#X connect 18 1 20 0;
+#X connect 18 1 22 0;
+#X connect 19 0 1 1;
+#X connect 20 0 1 2;
+#X connect 21 0 12 0;
+#X connect 21 1 7 0;
+#X connect 22 0 10 0;
+#X connect 23 0 7 0;
+#X connect 24 0 13 0;
+#X connect 24 1 22 0;
+#X connect 25 0 22 0;
 #X coords 0 -1 1 1 200 200 2 100 100;
