@@ -198,7 +198,7 @@
 #X obj 864 727 outlet;
 #X obj 100 99 cnv 5 5 5 \$0-pos \$0-pos-rcv empty 20 12 0 14 -66577
 -66577 0;
-#X obj 100 102 vsl 360 60 0 127 0 0 empty empty empty 0 20 0 20 -233017
+#X obj 100 102 vsl 160 140 0 127 0 0 empty empty empty 0 20 0 20 -233017
 -233017 -233017 0 1;
 #X msg 790 213 -1;
 #X obj 612 311 route remove update pressure;
@@ -233,12 +233,12 @@
 #X msg 660 754 color 10 10 10;
 #X msg 678 715 set color \$1 \$1 \$1;
 #X msg 263 696 set color \$1 \$1 \$1;
-#N canvas 0 50 1202 739 monoclickmode 0;
+#N canvas 0 50 1202 739 monoclickmode 1;
 #X obj 31 11 inlet;
 #X msg 74 419 0;
 #X msg 42 178 1;
 #X obj 30 41 t b;
-#X obj 43 478 outlet;
+#X obj 42 596 outlet;
 #X obj 35 144 select 0;
 #X text 251 111 Pour utiliser la souris quand pas en mode multitouch
 ;
@@ -263,8 +263,14 @@
 #X obj 181 411 list append;
 #X obj 181 440 list split 2;
 #X obj 48 295 t f b b;
+#X obj 38 527 change;
+#X obj 74 375 t b b;
+#X obj 746 244 r dnd-dropped;
+#X obj 746 273 route -done;
+#X obj 746 302 t b;
+#X obj 746 331 delay 2;
 #X connect 0 0 3 0;
-#X connect 1 0 4 0;
+#X connect 1 0 28 0;
 #X connect 2 0 27 0;
 #X connect 3 0 8 0;
 #X connect 5 0 2 0;
@@ -275,8 +281,7 @@
 #X connect 12 0 11 1;
 #X connect 13 0 11 1;
 #X connect 14 0 16 0;
-#X connect 14 1 1 0;
-#X connect 14 1 12 0;
+#X connect 14 1 29 0;
 #X connect 15 0 20 0;
 #X connect 16 0 17 0;
 #X connect 16 1 18 0;
@@ -292,9 +297,16 @@
 #X connect 24 0 25 1;
 #X connect 25 0 26 0;
 #X connect 26 0 16 0;
-#X connect 27 0 4 0;
+#X connect 27 0 28 0;
 #X connect 27 1 13 0;
 #X connect 27 2 25 0;
+#X connect 28 0 4 0;
+#X connect 29 0 1 0;
+#X connect 29 1 12 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 33 0;
+#X connect 33 0 29 0;
 #X restore 105 537 pd monoclickmode;
 #X obj 316 44 route editmode mouse zoom;
 #X obj 646 81 t b b;
@@ -338,7 +350,7 @@
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 199 256 pd;
 #X obj 197 85 tgl 20 0 \$0-jump_on_click \$0-jump_on_click-rcv jump_on_click
--100 7 0 12 -262144 -1 -1 1 1;
+-100 7 0 12 -262144 -1 -1 0 1;
 #X obj 133 32 vradio 20 1 0 2 \$0-mode \$0-mode-rcv cursor_mode -100
 -10 0 15 -262144 -1 -1 0;
 #X text 161 44 infinite (-pi \, +pi);
@@ -494,4 +506,4 @@
 #X connect 81 1 31 1;
 #X connect 83 0 38 0;
 #X connect 84 0 36 0;
-#X coords 0 -1 1 1 360 66 2 100 100;
+#X coords 0 -1 1 1 160 146 2 100 100;

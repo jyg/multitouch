@@ -14,7 +14,7 @@
 #X obj 540 252 /;
 #X obj 690 252 /;
 #X obj 690 142 t f b;
-#X floatatom 242 273 5 0 0 0 - - #0-set-device-number, f 5;
+#X floatatom 242 273 5 0 0 0 - - #0-set-device-number;
 #X text 55 198 2) in the pd console \, look for your touchscreen device
 number \, and report it here ->, f 20;
 #X obj 595 174 r \$0-xrange;

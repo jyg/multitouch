@@ -214,15 +214,15 @@
 #X msg 263 696 set color \$1 \$1 \$1;
 #X obj 956 552 - 0.5;
 #X obj 937 622 atan2;
-#X obj 100 100 bng 317 250 50 0 empty \$0-bang empty 17 7 0 10 -233017
+#X obj 100 100 bng 112 250 50 0 empty \$0-bang empty 17 7 0 10 -233017
 -233017 -233017;
 #X msg 98 67 size \$1;
 #X obj 98 37 r \$0-w;
-#X obj 379 309 cnv 10 10 10 empty \$0-cursor1 empty 20 12 0 14 -1 -66577
+#X obj 151 105 cnv 10 10 10 empty \$0-cursor1 empty 20 12 0 14 -1 -66577
 0;
-#X obj 351 296 cnv 10 10 10 empty \$0-cursor2 empty 20 12 0 14 -1 -66577
+#X obj 151 115 cnv 10 10 10 empty \$0-cursor2 empty 20 12 0 14 -1 -66577
 0;
-#X obj 323 284 cnv 10 10 10 empty \$0-cursor3 empty 20 12 0 14 -1 -66577
+#X obj 151 125 cnv 10 10 10 empty \$0-cursor3 empty 20 12 0 14 -1 -66577
 0;
 #X obj 1229 465 -;
 #X obj 1210 369 t f f f;
@@ -481,7 +481,7 @@
 #X obj 197 85 tgl 20 0 \$0-jump_on_click \$0-jump_on_click-rcv jump_on_click
 -100 7 0 12 -262144 -1 -1 0 1;
 #X obj 133 32 vradio 20 1 0 2 \$0-mode \$0-mode-rcv cursor_mode -100
--10 0 15 -262144 -1 -1 1;
+-10 0 15 -262144 -1 -1 0;
 #X text 161 44 infinite (-pi \, +pi);
 #X text 161 24 one rotation (0 \, 1);
 #X obj 300 264 bng 40 250 50 0 \$0-ok empty OK 5 20 0 20 -204786 -1
@@ -565,23 +565,23 @@
 #X msg 879 791 0;
 #X obj 871 750 loadbang;
 #X floatatom 858 657 5 0 0 0 - - -;
-#N canvas 0 50 1202 739 monoclickmode 0;
+#N canvas 742 365 1202 739 monoclickmode 0;
 #X obj 31 11 inlet;
-#X msg 74 419 0;
-#X msg 42 178 1;
+#X msg 68 440 0;
+#X msg 42 228 1;
 #X obj 30 41 t b;
-#X obj 43 478 outlet;
-#X obj 35 144 select 0;
-#X text 251 111 Pour utiliser la souris quand pas en mode multitouch
+#X obj 46 575 outlet;
+#X obj 35 194 select 0;
+#X text 281 138 Pour utiliser la souris quand pas en mode multitouch
 ;
-#X obj 25 106 v TRACKED.SLOTS;
-#X obj 30 70 delay 1;
+#X obj 25 156 v TRACKED.SLOTS;
+#X obj 36 118 delay 1;
 #X obj 222 481 outlet;
-#X obj 234 223 iemguts/receivecanvas 2;
-#X obj 231 290 spigot;
-#X msg 325 261 0;
-#X msg 181 256 1;
-#X obj 239 329 route motion mouseup;
+#X obj 237 178 iemguts/receivecanvas 2;
+#X obj 241 254 spigot;
+#X msg 310 218 0;
+#X msg 185 220 1;
+#X obj 240 291 route motion mouseup;
 #X obj 774 44 inlet zoom;
 #X obj 340 394 unpack f f f;
 #X obj 340 423 / 1;
@@ -592,8 +592,16 @@
 #X obj 181 411 list append;
 #X obj 179 442 list split 2;
 #X obj 48 295 t f b b;
+#X obj 101 398 t b b;
+#X obj 135 451 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 43 515 change;
+#X obj 188 24 r dnd-dropped;
+#X obj 188 53 route -done;
+#X obj 188 82 t b;
+#X obj 188 111 delay 2;
 #X connect 0 0 3 0;
-#X connect 1 0 4 0;
+#X connect 1 0 27 0;
 #X connect 2 0 24 0;
 #X connect 3 0 8 0;
 #X connect 5 0 2 0;
@@ -604,8 +612,7 @@
 #X connect 12 0 11 1;
 #X connect 13 0 11 1;
 #X connect 14 0 16 0;
-#X connect 14 1 1 0;
-#X connect 14 1 12 0;
+#X connect 14 1 25 0;
 #X connect 15 0 20 0;
 #X connect 16 0 17 0;
 #X connect 16 1 18 0;
@@ -618,9 +625,17 @@
 #X connect 21 0 22 1;
 #X connect 22 0 23 0;
 #X connect 23 0 16 0;
-#X connect 24 0 4 0;
+#X connect 24 0 27 0;
 #X connect 24 1 13 0;
 #X connect 24 2 22 0;
+#X connect 25 0 1 0;
+#X connect 25 0 26 0;
+#X connect 25 1 12 0;
+#X connect 27 0 4 0;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 25 0;
 #X restore 123 529 pd monoclickmode;
 #X obj 316 44 route editmode mouse zoom;
 #X obj 646 81 t b b;
@@ -779,4 +794,4 @@ touch event est capturé;
 #X connect 125 0 127 0;
 #X connect 125 1 124 0;
 #X connect 127 0 123 0;
-#X coords 0 -1 1 1 317 317 2 100 100;
+#X coords 0 -1 1 1 112 112 2 100 100;

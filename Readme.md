@@ -1,9 +1,9 @@
 # MULTITOUCH FOR PUREDATA
 
-Enabling pseudo-multi-touch mode with pd-native guis, inside any patch.
+Enabling multi-touch mode with pd-native guis, inside any patch.
 
-This is higly experimental, and not guaranteed to work on any  touchscreen setup.
-Any feedback wellcome jyg@gumo.fr
+This is experimental, and not guaranteed to work on any  touchscreen setup.
+Any feedback welcome jyg@gumo.fr
 
  Demo here : https://vimeo.com/292789121
 
@@ -12,8 +12,8 @@ Any feedback wellcome jyg@gumo.fr
 - Required configuration : linux pc with multitouch screen.
 - Multitouch gestures (scrolling, zooming, pinch, etc...) shoud be desactivated on the O.S.. Only monotouch events have to be forwarded as mouse events by the O.S..
 - Puredata 0.49
-- hcs/screensize external (optional)
 - iemguts lib externals
+- hcs/screensize external (optional)
 - and a special version of hidio (included). see here https://github.com/jyg/PdMultitouch/blob/master/hidio/Readme.md
 
 ## Installation
@@ -23,6 +23,10 @@ Any feedback wellcome jyg@gumo.fr
 
 3) Open the patch *multitouch.enable-help.pd*.
 
-4) follow the 3-stages configuration in the *multitouch.settings.pd* window.
+4) follow the 4-stages configuration in the *multitouch.settings2.pd* window.
 
 That's all...
+
+## Changes Log
+17/12/2018	
+	added custom gui modules : vfader, jogzone (pd 0.49)
