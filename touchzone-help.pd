@@ -1,4 +1,4 @@
-#N canvas 633 187 714 599 16;
+#N canvas 103 412 714 599 16;
 #X obj 44 175 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 69 10 touchzone;
@@ -24,14 +24,8 @@
 #A saved -size 100;
 #A saved -mode 0;
 #X text 338 11 pd 0.49 + iemguts;
-#X obj 490 391 r MULTITOUCH.RAW;
-#X obj 490 420 print raw;
-#X obj 445 517 r MULTITOUCH.COOKED;
-#X obj 445 546 print cooked;
 #X connect 6 0 7 0;
 #X connect 6 1 8 0;
 #X connect 9 0 0 0;
 #X connect 9 1 6 0;
 #X connect 9 2 4 0;
-#X connect 13 0 14 0;
-#X connect 15 0 16 0;

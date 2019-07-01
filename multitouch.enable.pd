@@ -1,4 +1,4 @@
-#N canvas -52 102 998 899 12;
+#N canvas 604 124 998 899 12;
 #X obj 92 130 iemguts/receivecanvas 1;
 #X obj 321 211 r MULTITOUCH_OSC;
 #X obj 316 291 route 330;
@@ -34,19 +34,19 @@
 #X msg 84 192 1;
 #X obj 80 219 v MULTITOUCH.DAEMON;
 #X obj 48 150 t b b;
-#X msg 174 279 clear;
 #X msg 44 312 clear \, obj 10 10 multitouch.daemon2 \, loadbang;
 #X obj 35 32 loadbang;
 #X obj 47 63 metro 2000;
+#X msg 283 219 clear \, menusave;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
 #X connect 4 0 5 0;
-#X connect 6 0 8 0;
+#X connect 6 0 7 0;
 #X connect 6 1 4 0;
 #X connect 7 0 1 0;
-#X connect 8 0 1 0;
-#X connect 9 0 10 0;
-#X connect 10 0 2 0;
+#X connect 8 0 9 0;
+#X connect 9 0 2 0;
+#X connect 10 0 1 0;
 #X restore 416 71 pd multitouch.daemon;
 #X obj 560 516 spigot 1;
 #X obj 560 491 spigot;
@@ -79,6 +79,8 @@
 #X obj 403 834 / 1;
 #X obj 468 830 / 1;
 #X obj 337 779 t f f;
+#X obj 158 605 s ZOOM;
+#X obj 134 564 f 1;
 #X connect 0 0 25 0;
 #X connect 0 0 54 0;
 #X connect 1 0 18 0;
@@ -90,6 +92,7 @@
 #X connect 6 1 7 0;
 #X connect 6 1 22 0;
 #X connect 6 1 49 0;
+#X connect 6 1 59 0;
 #X connect 7 0 3 1;
 #X connect 8 0 11 0;
 #X connect 8 0 32 1;
@@ -141,8 +144,10 @@
 #X connect 51 0 52 1;
 #X connect 52 0 39 0;
 #X connect 54 0 57 0;
+#X connect 54 0 59 1;
 #X connect 55 0 37 0;
 #X connect 56 0 37 1;
 #X connect 57 0 55 1;
 #X connect 57 1 56 1;
+#X connect 59 0 58 0;
 #X coords 0 899 1 898 85 60 0;
