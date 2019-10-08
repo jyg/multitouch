@@ -202,12 +202,14 @@ void hidio_elements(t_hidio *x)
 
 void hidio_devices(t_hidio *x)
 {
-    debug_post(LOG_DEBUG,"hidio_devices");
+   t_atom output_data[3];
+    
+  debug_post(LOG_DEBUG,"hidio_devices");
     int i,fd;
     char device_output_string[MAXPDSTRING] = "Unknown";
     char dev_handle_name[MAXPDSTRING] = "/dev/input/event0";
 
-    post("");
+    //post("");
     for(i=0;i<128;++i) 
 	{
 	    snprintf(dev_handle_name, MAXPDSTRING, "/dev/input/event%d", i);
@@ -224,13 +226,40 @@ void hidio_devices(t_hidio *x)
 			{
 			    /* get name of device */
 			    ioctl(fd, EVIOCGNAME(sizeof(device_output_string)), device_output_string);
-			    post("Device %d: '%s' on '%s'", i, device_output_string, dev_handle_name);
+			   // post("Device %d: '%s' on '%s'", i, device_output_string, dev_handle_name);
+
+		
+#ifdef PD
+		            SETFLOAT(output_data, i);
+		            SETSYMBOL(output_data + 1, gensym(device_output_string));
+		            SETSYMBOL(output_data + 2, gensym(dev_handle_name));
+		           
+#else
+		            atom_setlong(output_data, i);
+		            atom_setsym(output_data + 1,  gensym(device_output_string));
+		            atom_setsym(output_data + 2,gensym(dev_handle_name));
+		           
+#endif /* PD */
+		            outlet_anything(x->x_status_outlet, gensym("devices"), 3	, output_data);
+		 
+
+
+
+
+
+
+
+
+
+
+
+
 			  
 			    close (fd);
 			}
 		} 
 	}
-    post("");	
+  //  post("");	
 }
 
 
