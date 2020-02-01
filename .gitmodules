@@ -1,0 +1,4 @@
+[submodule "hidio"]
+	path = hidio
+	url = https://github.com/jyg/hidio.git
+	branch = master
