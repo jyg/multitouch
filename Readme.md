@@ -14,7 +14,7 @@ Any feedback welcome jyg@gumo.fr
 - Puredata 0.49
 - iemguts lib externals
 - hcs/screensize external (optional)
-- and a special version of hidio (included). see here https://github.com/jyg/PdMultitouch/blob/master/hidio/Readme.md
+- and a special version of hidio . see here https://github.com/jyg/hidio
 
 ## Installation
 1) check you have installed iemguts externals library.
