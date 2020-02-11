@@ -29,7 +29,7 @@ inside this patch with the finger (not with the mouse);
 #X obj 40 14 multitouch.enable;
 #X obj 24 42 cnv 15 600 300 empty empty empty 20 12 0 14 -204786 -66577
 0;
-#X obj 101 110 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+#X obj 98 115 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 0;
 #X obj 382 109 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -43,7 +43,7 @@ inside this patch with the finger (not with the mouse);
 #X obj 622 42 cnv 15 270 120 empty empty empty 20 12 0 14 -204786 -66577
 0;
 #X obj 638 89 hradio 60 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 1;
+-1 2;
 #X text 641 58 h/v radios;
 #X text 223 14 supports following GUIs :;
 #X obj 622 157 cnv 15 470 185 empty empty empty 20 12 0 14 -261682
@@ -63,83 +63,95 @@ dragging, f 34;
 #X floatatom 905 121 5 0 0 0 - - -;
 #X text 906 50 number boxes don't work properly in multitouch mode
 , f 18;
-#X obj 21 349 cnv 15 1080 400 empty empty empty 20 12 0 14 -262130
--66577 0;
-#X text 44 365 * custom GUIs;
-#X text 94 404 vfader;
-#X text 441 394 xytouchpad;
-#X obj 403 434 xytouchpad;
-#X floatatom 403 647 5 0 0 0 x - -;
-#X floatatom 499 649 5 0 0 0 y - -;
-#X obj 604 651 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 0 50 1129 570 custom_multitouch/guis(!!OBSOLETE!!) 0;
+#X obj 21 29 cnv 15 1080 400 empty empty empty 20 12 0 14 -262130 -66577
+0;
+#X text 441 74 xytouchpad;
+#X obj 417 62 xytouchpad;
+#X floatatom 403 327 5 0 0 0 x - -;
+#X floatatom 499 329 5 0 0 0 y - -;
+#X obj 604 331 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 795 654 5 0 0 0 pressure - -;
-#X obj 671 584 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 795 334 5 0 0 0 pressure - -;
+#X obj 671 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 0 50 654 426 beta 0;
 #X obj 31 145 touchpad;
 #X obj 27 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 43 113 touchpad;
 #X obj 337 28 multitouch.enable;
 #X text 19 71 To be debugged / documented :;
+#X text 43 113 multitouch/touchpad;
 #X connect 0 0 1 0;
-#X restore 938 698 pd beta;
-#X obj 733 580 unpack f f;
-#X floatatom 731 607 5 0 0 0 x - -;
-#X floatatom 828 607 5 0 0 0 y - -;
-#X obj 918 458 jogzone;
+#X restore 938 378 pd beta;
+#X obj 733 260 unpack f f;
+#X floatatom 731 287 5 0 0 0 x - -;
+#X floatatom 828 287 5 0 0 0 y - -;
+#X obj 918 138 jogzone;
 #A saved -back_color 10;
 #A saved -front_color 1;
 #A saved -cursor_color -1;
 #A saved -jump_on_click 0;
 #A saved -size 134;
 #A saved -mode 0;
-#X obj 671 460 touchzone;
+#X obj 671 140 touchzone;
 #A saved -back_color 10;
 #A saved -mode 0;
 #A saved -front_color 1;
 #A saved -cursor_color -1;
 #A saved -size 131 104;
-#X text 921 393 jogzone;
-#X obj 203 436 hfader;
+#X obj 203 116 hfader;
 #A saved -speed_ratio 100;
 #A saved -front_color 11;
 #A saved -cursor_color 0;
 #A saved -back_color 10;
 #A saved -size 143 51;
-#X text 229 408 hfader;
-#X obj 92 429 vfader;
+#X obj 86 74 vfader;
 #A saved -speed_ratio 100;
 #A saved -front_color 11;
 #A saved -cursor_color 0;
 #A saved -back_color 10;
-#A saved -size 61 136;
-#X text 41 642 (vfader & hfader are vanilla compatible \, but need
+#A saved -size 84 127;
+#X text 41 322 (vfader & hfader are vanilla compatible \, but need
 iemguts for advanced editing features), f 33;
-#X floatatom 92 570 5 0 0 0 - - -;
-#X floatatom 203 492 5 0 0 0 - - -;
-#X text 402 673 (needs cyclone/mousestate), f 20;
-#X text 725 427 (with pressure sensivity);
-#X text 672 397 touchzone, f 19;
-#X obj 919 609 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X floatatom 84 218 5 0 0 0 - - -;
+#X floatatom 203 172 5 0 0 0 - - -;
+#X text 402 353 (needs cyclone/mousestate), f 20;
+#X text 725 107 (with pressure sensivity);
+#X obj 919 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 979 610 5 0 0 0 - - -;
-#X floatatom 1036 648 5 0 0 0 pressure - -;
+#X floatatom 979 290 5 0 0 0 - - -;
+#X floatatom 1036 328 5 0 0 0 pressure - -;
+#X obj 27 517 multitouch.enable;
+#X text 229 88 multitouch/hfader;
+#X text 94 285 multitouch/vfader;
+#X text 405 34 multitouch/xytouchpad;
+#X text 672 77 multitouch/touchzone;
+#X text 928 73 multitouch/jogzone;
+#X text 36 44 * custom GUIs (!!!DEPRECATED!!!);
+#X text 512 463 right-click + properties to edit parameters;
+#X text 521 490 ctrl+click in edit mode to resize;
+#X text 336 464 HOW TO EDIT :;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 12 0 21 0;
+#X connect 12 1 22 0;
+#X connect 12 2 23 0;
+#X connect 13 0 7 0;
+#X connect 13 1 9 0;
+#X connect 13 2 6 0;
+#X connect 14 0 18 0;
+#X connect 15 0 17 0;
+#X restore 37 401 pd custom_multitouch/guis(!!OBSOLETE!!);
+#X text 451 397 They do work \, but aren't well documented nor maintained.
+;
+#X text 119 518 https://github.com/jyg/mob;
+#X text 37 461 Please download and use instead the [mob] library \,
+that is MobMuPlat compatible., f 93;
 #X connect 17 0 18 0;
-#X connect 27 0 28 0;
-#X connect 27 1 29 0;
-#X connect 27 2 30 0;
-#X connect 34 0 35 0;
-#X connect 34 1 36 0;
-#X connect 37 0 49 0;
-#X connect 37 1 50 0;
-#X connect 37 2 51 0;
-#X connect 38 0 32 0;
-#X connect 38 1 34 0;
-#X connect 38 2 31 0;
-#X connect 40 0 45 0;
-#X connect 42 0 44 0;
 #X restore 57 460 pd supported_GUI's;
 #X text 259 459 <- click here to see which guis are supported;
 #X connect 7 0 9 0;
