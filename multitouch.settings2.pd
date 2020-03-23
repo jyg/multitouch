@@ -65,8 +65,8 @@ device here --->, f 27;
 #X obj 666 617 t b;
 #X obj 666 650 delay 200;
 #X obj 135 47 t b b;
-#X msg 405 630 open 0x04f3 0x0224 \, 1, f 12;
-#X msg 666 559 ELAN Touchscreen;
+#X msg 405 630, f 12;
+#X msg 666 559 blank;
 #X msg 46 386 reset;
 #X msg 46 444 set;
 #X msg 100 452 set blank;
@@ -151,7 +151,7 @@ device here --->, f 27;
 #X text 61 48 Before you can use multitouch mode in puredata \, you
 have first to adjust this patch according to your configuration, f
 38;
-#X msg 107 412 ELAN Touchscreen;
+#X msg 107 412;
 #X msg 585 163 3968;
 #X msg 746 161 2240;
 #X obj 952 272 bng 20 250 50 0 empty empty reset 35 7 0 12 -262144

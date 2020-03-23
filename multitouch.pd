@@ -24,7 +24,7 @@
 #X msg 507 555 0;
 #X obj 601 152 inlet;
 #X obj 92 295 spigot 1;
-#N canvas 320 294 811 799 multitouch.daemon 0;
+#N canvas 320 294 811 799 multitouch.daemon 1;
 #N canvas 0 50 450 300 \$0-dynamic_stuff 1;
 #X restore 489 159 pd \$0-dynamic_stuff;
 #X obj 45 337 s pd-\$0-dynamic_stuff;
@@ -175,10 +175,6 @@
 #X msg 119 967 \$3 \$4 \$1 \$2;
 #X obj 222 800 list append add;
 #X obj 255 829 list append update;
-#X obj 1127 136 loadbang;
-#X obj 1127 201 print warning;
-#X msg 1127 161 [multitouch.enable] name obsolete. use [multitouch]
-instead;
 #X connect 0 0 55 0;
 #X connect 1 0 17 0;
 #X connect 2 0 18 0;
@@ -262,6 +258,4 @@ instead;
 #X connect 79 0 69 0;
 #X connect 80 0 77 0;
 #X connect 81 0 77 0;
-#X connect 82 0 84 0;
-#X connect 84 0 83 0;
 #X coords 0 1023 1 1022 85 60 0;
