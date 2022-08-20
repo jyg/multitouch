@@ -27,6 +27,9 @@ Any feedback welcome jyg@gumo.fr
 
 That's all...
 
+## Ubuntu 20.04 and input device access permission
+see this issue https://github.com/jyg/multitouch/issues/2
+
 ## Changes Log
 17/12/2018	
 	added custom gui modules : vfader, jogzone (pd 0.49)
