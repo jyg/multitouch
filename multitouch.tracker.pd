@@ -1,4 +1,4 @@
-#N canvas 1010 134 1920 1023 12;
+#N canvas 407 196 1920 1023 12;
 #X obj 95 50 inlet;
 #X obj 74 819 outlet;
 #X obj 91 655 pack f f;
@@ -19,7 +19,7 @@
 #X msg 621 481 1;
 #X obj 483 596 *;
 #X msg 483 625 pressure \$1;
-#N canvas 264 190 1920 1023 multitouch.slot2 0;
+#N canvas 400 91 1920 1023 multitouch.slot2 0;
 #X obj 121 7 inlet;
 #X obj 222 315 unpack f f;
 #X obj 316 419 pack f f;

@@ -1,153 +1,246 @@
 #N canvas 635 148 1033 565 16;
-#X obj 53 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 222 218 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 403 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 542 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 609 13 cnv 15 220 120 empty empty empty 20 12 0 14 -262130 -66577
+#X obj 53 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 222 218 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 403 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 542 221 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 609 13 cnv 15 220 120 empty empty empty 20 12 0 14 #fcfcc4 #404040
 0;
 #X msg 627 26 1;
 #X msg 628 59 0;
 #X text 670 23 enable (default);
 #X text 686 57 disable;
-#X obj 779 155 bng 30 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 779 155 bng 30 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 740 194 s MULTITOUCH.SETTINGS.OPEN;
 #X text 811 94 <- to configure \, right-click + "properties" or <-
 click here, f 16;
 #X text 28 43 Enables multi-touch mode inside a patch;
 #X text 28 137 To use multitouch in a patch \, you have first to touch
 inside this patch with the finger (not with the mouse);
-#N canvas 395 200 1146 766 supported_GUI's 0;
-#X obj 24 42 cnv 15 600 300 empty empty empty 20 12 0 14 -204786 -66577
+#N canvas 395 200 1484 810 supported_GUI's 1;
+#X obj 24 42 cnv 15 600 620 empty empty empty 20 12 0 14 #c4fcc4 #404040
 0;
-#X obj 98 115 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 382 109 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 244 110 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 0;
-#X obj 492 109 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 38 115 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 382 109 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 142 115 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 492 109 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
 #X text 91 78 vsl/hsl (jump on click);
 #X text 391 78 vsl/hsl (sliding);
-#X text 42 50 * native GUIs;
-#X obj 622 42 cnv 15 270 120 empty empty empty 20 12 0 14 -204786 -66577
+#X text 156 16 supports following GUIs :;
+#X obj 627 44 cnv 15 470 500 empty empty empty 20 12 0 14 #fce0c4 #404040
 0;
-#X obj 638 89 hradio 60 1 0 4 empty empty empty 0 -8 0 10 -262144 -1
--1 2;
-#X text 641 58 h/v radios;
-#X text 223 14 supports following GUIs :;
-#X obj 622 157 cnv 15 470 185 empty empty empty 20 12 0 14 -261682
--66577 0;
-#X obj 659 231 tgl 100 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
-#X obj 783 229 bng 100 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X text 637 165 toogles and bangs work if you tap with the finger without
-dragging, f 34;
-#X msg 900 221 message;
-#X obj 901 253 print;
-#X text 899 274 message boxes may trigger more than one time., f 19
+#X msg 913 133 message;
+#X obj 914 165 print;
+#X text 646 128 message boxes may trigger more than one time., f 25
 ;
-#X obj 892 42 cnv 15 200 120 empty empty empty 20 12 0 14 -260097 -66577
-0;
-#X floatatom 905 121 5 0 0 0 - - -;
-#X text 906 50 number boxes don't work properly in multitouch mode
-, f 18;
-#N canvas 0 50 1129 570 custom_multitouch/guis(!!OBSOLETE!!) 0;
-#X obj 21 29 cnv 15 1080 400 empty empty empty 20 12 0 14 -262130 -66577
-0;
-#X text 441 74 xytouchpad;
-#X obj 417 62 xytouchpad;
-#X floatatom 403 327 5 0 0 0 x - -;
-#X floatatom 499 329 5 0 0 0 y - -;
-#X obj 604 331 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X floatatom 795 334 5 0 0 0 pressure - -;
-#X obj 671 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#N canvas 0 50 654 426 beta 0;
-#X obj 31 145 touchpad;
-#X obj 27 374 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 337 28 multitouch.enable;
-#X text 19 71 To be debugged / documented :;
-#X text 43 113 multitouch/touchpad;
-#X connect 0 0 1 0;
-#X restore 938 378 pd beta;
-#X obj 733 260 unpack f f;
-#X floatatom 731 287 5 0 0 0 x - -;
-#X floatatom 828 287 5 0 0 0 y - -;
-#X obj 918 138 jogzone;
-#A saved -back_color 10;
-#A saved -front_color 1;
-#A saved -cursor_color -1;
-#A saved -jump_on_click 0;
-#A saved -size 134;
-#A saved -mode 0;
-#X obj 671 140 touchzone;
-#A saved -back_color 10;
-#A saved -mode 0;
-#A saved -front_color 1;
-#A saved -cursor_color -1;
-#A saved -size 131 104;
-#X obj 203 116 hfader;
-#A saved -speed_ratio 100;
-#A saved -front_color 11;
-#A saved -cursor_color 0;
-#A saved -back_color 10;
-#A saved -size 143 51;
-#X obj 86 74 vfader;
-#A saved -speed_ratio 100;
-#A saved -front_color 11;
-#A saved -cursor_color 0;
-#A saved -back_color 10;
-#A saved -size 84 127;
-#X text 41 322 (vfader & hfader are vanilla compatible \, but need
-iemguts for advanced editing features), f 33;
-#X floatatom 84 218 5 0 0 0 - - -;
-#X floatatom 203 172 5 0 0 0 - - -;
-#X text 402 353 (needs cyclone/mousestate), f 20;
-#X text 725 107 (with pressure sensivity);
-#X obj 919 289 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X floatatom 979 290 5 0 0 0 - - -;
-#X floatatom 1036 328 5 0 0 0 pressure - -;
-#X text 229 88 multitouch/hfader;
-#X text 94 285 multitouch/vfader;
-#X text 405 34 multitouch/xytouchpad;
-#X text 672 77 multitouch/touchzone;
-#X text 928 73 multitouch/jogzone;
-#X text 36 44 * custom GUIs (!!!DEPRECATED!!!);
-#X text 512 463 right-click + properties to edit parameters;
-#X text 521 490 ctrl+click in edit mode to resize;
-#X text 336 464 HOW TO EDIT :;
-#X obj 27 517 multitouch;
-#X connect 2 0 3 0;
-#X connect 2 1 4 0;
-#X connect 2 2 5 0;
-#X connect 9 0 10 0;
-#X connect 9 1 11 0;
-#X connect 12 0 21 0;
-#X connect 12 1 22 0;
-#X connect 12 2 23 0;
-#X connect 13 0 7 0;
-#X connect 13 1 9 0;
-#X connect 13 2 6 0;
-#X connect 14 0 18 0;
-#X connect 15 0 17 0;
-#X restore 37 401 pd custom_multitouch/guis(!!OBSOLETE!!);
-#X text 451 397 They do work \, but aren't well documented nor maintained.
-;
-#X text 119 518 https://github.com/jyg/mob;
-#X text 37 461 Please download and use instead the [mob] library \,
-that is MobMuPlat compatible., f 93;
+#X obj 636 248 cnv 15 350 150 empty empty empty 20 12 0 14 #fc8000
+#404040 0;
+#X floatatom 655 322 5 0 0 0 - - - 0;
+#X text 79 741 https://github.com/jyg/mob;
 #X obj 40 14 multitouch;
-#X connect 16 0 17 0;
+#X obj 43 335 hsl 200 60 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 43 405 hsl 200 60 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 0;
+#X obj 383 335 hsl 200 60 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 383 405 hsl 200 60 0 127 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X symbolatom 719 323 10 0 0 0 - - - 0;
+#X obj 848 56 hradio 60 1 0 4 empty empty empty 0 -8 0 10 #fcfcfc #000000
+#000000 0;
+#X text 647 58 h/v radios may trigger more than one time., f 18;
+#X text 42 50 * Native GUIs;
+#X text 39 665 * Custom extended GUIs;
+#X text 79 688 The [mob] abstractions library delivers xy_sliders \,
+xy_multi sliders \, h/v faders \, jogs \, buttons \, knobs \, color
+arrays \, LCDs and more..., f 71;
+#N canvas 0 0 749 632 super_toogle 0;
+#X obj 100 100 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 413 f;
+#X obj 187 387 == 0;
+#X msg 148 442 set \$1;
+#X obj 151 296 timer;
+#X obj 92 28 inlet;
+#X obj 83 582 outlet;
+#X obj 149 354 select 1;
+#X obj 101 239 t f b b f;
+#X obj 74 523 spigot;
+#X obj 132 488 == 0;
+#X obj 151 325 < 100;
+#X text 247 325 <- debounce time;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 4 0;
+#X connect 8 2 4 1;
+#X connect 8 3 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
+#X restore 37 548 pd super_toogle;
+#X text 642 192 bang works if you tap with the finger without dragging
+, f 34;
+#X text 651 250 number boxes and toggles don't work properly in multitouch
+mode, f 34;
+#X obj 859 293 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 992 187 bng 100 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#N canvas 0 0 450 300 about 0;
+#X text 23 1 [mob] supports advanced multitouch features. Moreover
+\, you can use it to export your patches to MobMuPlat platform., f
+39;
+#X text 68 111 https://github.com/jyg/mob;
+#X restore 442 740 pd about [mob];
+#X text 39 477 * those toggles are embedded in a subpatch with debouncing
+in order to support multitouch mode and hover / swipe gestures, f
+57;
+#N canvas 0 0 749 632 super_toogle 0;
+#X obj 100 100 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 413 f;
+#X obj 187 387 == 0;
+#X msg 148 442 set \$1;
+#X obj 151 296 timer;
+#X obj 92 28 inlet;
+#X obj 83 582 outlet;
+#X obj 149 354 select 1;
+#X obj 101 239 t f b b f;
+#X obj 74 523 spigot;
+#X obj 132 488 == 0;
+#X obj 151 325 < 100;
+#X text 247 325 <- debounce time;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 4 0;
+#X connect 8 2 4 1;
+#X connect 8 3 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
+#X restore 147 548 pd super_toogle;
+#N canvas 0 0 749 632 super_toogle 0;
+#X obj 100 100 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 413 f;
+#X obj 187 387 == 0;
+#X msg 148 442 set \$1;
+#X obj 151 296 timer;
+#X obj 92 28 inlet;
+#X obj 83 582 outlet;
+#X obj 149 354 select 1;
+#X obj 101 239 t f b b f;
+#X obj 74 523 spigot;
+#X obj 132 488 == 0;
+#X obj 151 325 < 100;
+#X text 247 325 <- debounce time;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 4 0;
+#X connect 8 2 4 1;
+#X connect 8 3 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
+#X restore 257 548 pd super_toogle;
+#N canvas 0 0 749 632 super_toogle 0;
+#X obj 100 100 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 413 f;
+#X obj 187 387 == 0;
+#X msg 148 442 set \$1;
+#X obj 151 296 timer;
+#X obj 92 28 inlet;
+#X obj 83 582 outlet;
+#X obj 149 354 select 1;
+#X obj 101 239 t f b b f;
+#X obj 74 523 spigot;
+#X obj 132 488 == 0;
+#X obj 151 325 < 100;
+#X text 247 325 <- debounce time;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 4 0;
+#X connect 8 2 4 1;
+#X connect 8 3 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
+#X restore 367 548 pd super_toogle;
+#N canvas 0 0 749 632 super_toogle 0;
+#X obj 100 100 tgl 100 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 413 f;
+#X obj 187 387 == 0;
+#X msg 148 442 set \$1;
+#X obj 151 296 timer;
+#X obj 92 28 inlet;
+#X obj 83 582 outlet;
+#X obj 149 354 select 1;
+#X obj 101 239 t f b b f;
+#X obj 74 523 spigot;
+#X obj 132 488 == 0;
+#X obj 151 325 < 100;
+#X text 247 325 <- debounce time;
+#X connect 0 0 8 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 11 0;
+#X connect 5 0 0 0;
+#X connect 7 0 1 0;
+#X connect 8 0 9 0;
+#X connect 8 1 4 0;
+#X connect 8 2 4 1;
+#X connect 8 3 2 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 1;
+#X connect 11 0 7 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 100 100 2 100 100;
+#X restore 477 548 pd super_toogle;
+#X connect 9 0 10 0;
 #X restore 57 460 pd supported_GUI's;
 #X text 259 459 <- click here to see which guis are supported;
 #X text 128 8 [multitouch];

@@ -1,7 +1,6 @@
-#N canvas 1142 146 932 566 16;
+#N canvas 716 145 932 566 16;
 #X msg 68 113 set 8;
 #X msg 71 144 60;
-#X obj 686 69 multitouch.enable;
 #X text 56 73 arg1 : default value;
 #X text 53 50 output value between 0 & 127;
 #X obj 410 447 jogzone;
@@ -27,11 +26,11 @@
 #X text 30 19 horizontal fader \, multitouch-compatible;
 #X text 20 317 hfader;
 #X obj 121 325 hfader;
-#A saved -speed_ratio 10;
+#A saved -speed_ratio 100;
 #A saved -front_color 11;
 #A saved -cursor_color 0;
 #A saved -back_color 10;
-#A saved -size 151 24;
+#A saved -size 127 15;
 #X floatatom 124 356 5 0 0 0 - - -;
 #X text 260 418 vfader;
 #X obj 341 407 vfader;
@@ -44,11 +43,12 @@
 #X msg 356 260 speed_ratio 100;
 #X text 387 154 To change size click properties or go in editmode and
 ctrl+drag the fader, f 38;
-#X connect 0 0 16 0;
-#X connect 1 0 16 0;
-#X connect 6 0 16 0;
-#X connect 7 0 16 0;
-#X connect 13 0 16 0;
-#X connect 16 0 17 0;
-#X connect 20 0 16 0;
-#X connect 21 0 16 0;
+#X obj 686 69 multitouch;
+#X connect 0 0 15 0;
+#X connect 1 0 15 0;
+#X connect 5 0 15 0;
+#X connect 6 0 15 0;
+#X connect 12 0 15 0;
+#X connect 15 0 16 0;
+#X connect 19 0 15 0;
+#X connect 20 0 15 0;

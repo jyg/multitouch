@@ -19,7 +19,7 @@
 #X obj 163 4 r MULTITOUCH_OSC;
 #X obj 301 192 r MULTITOUCH.SETTINGS.OPEN;
 #X msg 301 217 open;
-#X obj 480 256 hidio;
+#X obj 495 254 hidio;
 #X obj 89 701 s MULTITOUCH.RAW;
 #X obj 163 441 route 48 49;
 #X msg 157 474 MT_TOUCH_LENGTH \$1;
