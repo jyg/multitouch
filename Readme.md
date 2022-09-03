@@ -24,6 +24,7 @@ Any feedback welcome jyg@gumo.fr
 3) Open the patch *multitouch-help.pd*.
 
 4) follow the 4 steps configuration procedure in the *multitouch.settings2.pd* window.
+![image](https://user-images.githubusercontent.com/1431894/188274136-1ec0e88b-06b5-4a78-a4fd-26cdd6728e2d.png)
 
 That's all...
 
