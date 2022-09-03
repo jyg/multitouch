@@ -21,9 +21,9 @@ Any feedback welcome jyg@gumo.fr
 
 2) put the *hidio.pd_linux* file (from hidio folder) into your externals folder. Check if it works by opening hidio-help.pd. (If not, you may have to recompile it. In a terminal inside hidio folder, type  **./configure** then **make**).
 
-3) Open the patch *multitouch.enable-help.pd*.
+3) Open the patch *multitouch-help.pd*.
 
-4) follow the 4-stages configuration in the *multitouch.settings2.pd* window.
+4) follow the 4 steps configuration procedure in the *multitouch.settings2.pd* window.
 
 That's all...
 
