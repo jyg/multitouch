@@ -21,7 +21,7 @@ click here, f 16;
 #X text 28 43 Enables multi-touch mode inside a patch;
 #X text 28 137 To use multitouch in a patch \, you have first to touch
 inside this patch with the finger (not with the mouse);
-#N canvas 395 200 1484 810 supported_GUI's 1;
+#N canvas 221 67 1121 789 supported_GUI's 0;
 #X obj 24 42 cnv 15 600 620 empty empty empty 20 12 0 14 #c4fcc4 #404040
 0;
 #X obj 38 115 vsl 100 200 0 127 0 0 empty empty empty 0 -9 0 10 #fcfcfc
